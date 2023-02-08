@@ -1,7 +1,4 @@
 gamepad_id = -1;
-if (ybase =! y){
-	y += 1;
-}
 
 for (var i = 0; i < 12; i += 1;)
 {
@@ -17,17 +14,21 @@ for (var i = 0; i < 12; i += 1;)
 if gamepad_id > -1
 {
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
-    //var _v = gamepad_axis_value(gamepad_id, gp_axislv);
-    x += _h * 6;
-    //y += _v * 4;
-}
-
-
-{
+	var _x = gamepad_axis_value(gamepad_id, gp_face3); //jump
+	var _a = gamepad_axis_value(gamepad_id, gp_face1); //special
+	var _b = gamepad_axis_value(gamepad_id, gp_face2); //attk
+	var _y = gamepad_axis_value(gamepad_id, gp_face4); //block
 	
-	if (gamepad_button_check(gamepad_id,gp_shoulderl) == true) and (ybase =! y){
-		y += 60;
+	
+	
+	x += _h * 6; // move LR
+	
+
+		if (_x)
+		{
+			y-= _x * 4
+			
+		}
 	}
 	
-	
-}
+
