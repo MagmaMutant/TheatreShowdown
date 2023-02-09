@@ -13,22 +13,50 @@ for (var i = 0; i < 12; i += 1;)
 
 if gamepad_id > -1
 {
+	//establish controls
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
-	var _x = gamepad_axis_value(gamepad_id, gp_face3); //jump
-	var _a = gamepad_axis_value(gamepad_id, gp_face1); //special
-	var _b = gamepad_axis_value(gamepad_id, gp_face2); //attk
-	var _y = gamepad_axis_value(gamepad_id, gp_face4); //block
+	var _x = gamepad_button_check(gamepad_id, gp_face3); //jump
+	var _a = gamepad_button_check(gamepad_id, gp_face1); //special
+	var _b = gamepad_button_check(gamepad_id, gp_face2); //attk
+	var _y = gamepad_button_check(gamepad_id, gp_face4); //block
 	
 	
+	//
 	
-	x += _h * 6; // move LR
-	
-
-		if (_x)
+	// cant do while blocking
+	if not blocking
+	{
+		// walking
+		x += _h * 4; 
+		
+		
+		//jumping
+		if ((canjump) && (_x)) 
 		{
-			y-= _x * 4
-			
+			vspeed = -7;
+			gravity = .3;
+			canjump = false;
+	
 		}
+	
 	}
 	
+	
+	
+	//block
+	if (_y) && canjump 
+	{
+		sprite_index  = spr_shielded
+		blocking = true;
+	}
+	else
+	{
+		sprite_index  = spr_p1
+		blocking = false;
+	}
+
+}
+
+
+
 

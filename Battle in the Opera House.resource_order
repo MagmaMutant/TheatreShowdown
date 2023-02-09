@@ -16,7 +16,8 @@
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
   ],
   "ResourceOrderSettings": [
-    {"name":"obj_floor","order":1,"path":"objects/obj_floor/obj_floor.yy",},
+    {"name":"obj_wall","order":1,"path":"objects/obj_wall/obj_wall.yy",},
+    {"name":"spr_shielded","order":18,"path":"sprites/spr_shielded/spr_shielded.yy",},
     {"name":"spr_floor","order":16,"path":"sprites/spr_floor/spr_floor.yy",},
     {"name":"Spr_battlefield","order":1,"path":"sprites/Spr_battlefield/Spr_battlefield.yy",},
     {"name":"spr_p1","order":15,"path":"sprites/spr_p1/spr_p1.yy",},
