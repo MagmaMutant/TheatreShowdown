@@ -4,4 +4,5 @@
 		gravity = 0
 		vspeed = 0
 		canjump =true
+		
 	}

@@ -23,7 +23,9 @@
     {"name":"spr_shielded","order":1,"path":"sprites/spr_shielded/spr_shielded.yy",},
     {"name":"spr_dummy","order":1,"path":"sprites/spr_dummy/spr_dummy.yy",},
     {"name":"spr_floor","order":2,"path":"sprites/spr_floor/spr_floor.yy",},
+    {"name":"spr_p1AttackB","order":4,"path":"sprites/spr_p1AttackB/spr_p1AttackB.yy",},
     {"name":"Spr_battlefield","order":1,"path":"sprites/Spr_battlefield/Spr_battlefield.yy",},
+    {"name":"spr_p1AttackA","order":3,"path":"sprites/spr_p1AttackA/spr_p1AttackA.yy",},
     {"name":"obj_parent_inside","order":3,"path":"objects/obj_parent_inside/obj_parent_inside.yy",},
   ],
 }

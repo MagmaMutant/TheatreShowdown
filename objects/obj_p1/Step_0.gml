@@ -15,9 +15,9 @@ if gamepad_id > -1
 {
 	//establish controls
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
-	var _x = gamepad_button_check(gamepad_id, gp_face3); //jump
-	var _a = gamepad_button_check(gamepad_id, gp_face1); //special
-	var _b = gamepad_button_check(gamepad_id, gp_face2); //attk
+	var _x = gamepad_button_check_pressed(gamepad_id, gp_face3); //jump
+	var _a = gamepad_button_check_pressed(gamepad_id, gp_face1); //special
+	var _b = gamepad_button_check_pressed(gamepad_id, gp_face2); //attk
 	var _y = gamepad_button_check(gamepad_id, gp_face4); //block
 	
 	
@@ -38,12 +38,17 @@ if gamepad_id > -1
 			canjump = false;
 	
 		}
-		if (_b)
+		if (_b) and canjump
 		{
 			attacking = true;
+			//play_
+			
+
+		}
+		if attacking = true
+		{
 			
 		}
-		
 		
 	}
 	
@@ -58,12 +63,13 @@ if gamepad_id > -1
 	}
 	else
 	{
-		sprite_index  = prevsprite
 		blocking = false;
+		sprite_index = spr_p1A
 	}
 
+
+
+
+
+
 }
-
-
-
-
