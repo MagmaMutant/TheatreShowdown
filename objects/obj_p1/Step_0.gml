@@ -38,7 +38,13 @@ if gamepad_id > -1
 			canjump = false;
 	
 		}
-	
+		if (_b)
+		{
+			attacking = true;
+			
+		}
+		
+		
 	}
 	
 	
@@ -46,12 +52,13 @@ if gamepad_id > -1
 	//block
 	if (_y) && canjump 
 	{
+		prevsprite = sprite_index
 		sprite_index  = spr_shielded
 		blocking = true;
 	}
 	else
 	{
-		sprite_index  = spr_p1
+		sprite_index  = prevsprite
 		blocking = false;
 	}
 
