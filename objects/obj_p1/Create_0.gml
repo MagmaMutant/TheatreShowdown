@@ -1,8 +1,11 @@
 hp = 100;
 prevsprite = sprite_index
-canjump = true;
+canjump = false;
 gravity = 0.3;
 vspeed = 0;
-blocking = false;
+blocking = true;
 attacking = false;
+walking = false
 // hspeed = 0; not used
+game = true
+full = false;

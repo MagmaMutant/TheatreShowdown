@@ -1,8 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_wall",
-  "eventList": [],
+  "name": "obj_slash",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,12 +28,9 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_floor",
-    "path": "sprites/spr_floor/spr_floor.yy",
+    "name": "spr_slash",
+    "path": "sprites/spr_slash/spr_slash.yy",
   },
-  "spriteMaskId": {
-    "name": "spr_floor",
-    "path": "sprites/spr_floor/spr_floor.yy",
-  },
-  "visible": false,
+  "spriteMaskId": null,
+  "visible": true,
 }

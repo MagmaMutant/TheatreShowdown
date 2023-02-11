@@ -24,30 +24,50 @@ if gamepad_id > -1
 	//
 	
 	// cant do while blocking
-	if not blocking
+	if not blocking and not attacking
 	{
 		// walking
-		x += _h * 4; 
-		
+		if (_h != 0)
+		{
+			walking = true;
+			x += _h * 4;
+			image_speed = abs(_h)
+			sprite_index = spr_p1walk;
+			//add animation speed acording to |_h|
+			
+		}
+		else if (_h = 0)
+		{
+			walking = false;
+			image_speed = 1;
+			fallingoridle();
+		}
 		
 		//jumping
 		if ((canjump) && (_x)) 
 		{
-			vspeed = -7;
+			vspeed = -9;
 			gravity = .3;
 			canjump = false;
 	
 		}
-		if (_b) and canjump
+		if (_b) //and canjump
 		{
 			attacking = true;
-			//play_
-			
-
+			if image_xscale == 1
+			{
+				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : true})
+			}
+			else
+			{
+				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : false})
+			}
 		}
-		if attacking = true
+		else
 		{
-			
+			//attacking = false;
+		}
+
 		}
 		
 	}
@@ -64,12 +84,22 @@ if gamepad_id > -1
 	else
 	{
 		blocking = false;
-		sprite_index = spr_p1A
+		if not walking{
+			fallingoridle();
+		}
 	}
-
-
-
-
-
-
+// toggle fullscreen
+if gamepad_button_check_pressed(gamepad_id,gp_select)
+{
+	if full{
+		full = false;
+	}
+	else{
+		full = true;
+	}
+	window_set_fullscreen(full);
 }
+
+
+
+

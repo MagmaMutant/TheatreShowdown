@@ -37,8 +37,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_p1A",
-    "path": "sprites/spr_p1A/spr_p1A.yy",
+    "name": "spr_p1Idle",
+    "path": "sprites/spr_p1Idle/spr_p1Idle.yy",
   },
   "spriteMaskId": null,
   "visible": true,
