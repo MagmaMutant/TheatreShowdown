@@ -56,11 +56,11 @@ if gamepad_id > -1
 			attacking = true;
 			if image_xscale == 1
 			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : true})
+				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : 1})
 			}
 			else
 			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : false})
+				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : -1})
 			}
 		}
 		else
