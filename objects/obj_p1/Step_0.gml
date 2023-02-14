@@ -31,9 +31,9 @@ if gamepad_id > -1
 		{
 			walking = true;
 			x += _h * 4;
-			image_speed = abs(_h)
+			image_speed = abs(_h) //add animation speed acording to |_h|
 			sprite_index = spr_p1walk;
-			//add animation speed acording to |_h|
+			
 			
 		}
 		else if (_h = 0)
