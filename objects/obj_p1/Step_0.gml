@@ -14,8 +14,9 @@ if gamepad_id > -1
 {
 	//establish controls
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
+	var _v = gamepad_axis_value(gamepad_id, gp_axislv); // vertical stick
 	var _x = gamepad_button_check_pressed(gamepad_id, gp_face3); //jump
-	var _select = gamepad_button_check_pressed(gamepad_id,gp_select); // select
+	//var _select = gamepad_button_check_pressed(gamepad_id,gp_select); // select
 	var _a = gamepad_button_check_pressed(gamepad_id, gp_face1); //special
 	var _b = gamepad_button_check_pressed(gamepad_id, gp_face2); //attk
 	var _y = gamepad_button_check(gamepad_id, gp_face4); //block
