@@ -1,4 +1,4 @@
-if game == true{
+if global.game == true{
 	if not attacking //and not attacking //and (sprite_index ==spr_p1A or sprite_index ==spr_p1B or sprite_index ==spr_shielded )
 	{
 	
