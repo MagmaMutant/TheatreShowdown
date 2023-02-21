@@ -1,4 +1,6 @@
+
 gamepad_id = -1;
+show_debug_message(gamepad_id)
 for (var i = 0; i < 12; i += 1;)
 {
     if gamepad_is_connected(i)

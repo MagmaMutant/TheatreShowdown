@@ -53,6 +53,8 @@
     {"id":{"name":"rm_gameover","path":"rooms/rm_gameover/rm_gameover.yy",},"order":0,},
     {"id":{"name":"fnt_counter","path":"fonts/fnt_counter/fnt_counter.yy",},"order":0,},
     {"id":{"name":"scr_afacingb","path":"scripts/scr_afacingb/scr_afacingb.yy",},"order":0,},
+    {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":0,},
+    {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},"order":0,},
     {"id":{"name":"obj_parent_inside","path":"objects/obj_parent_inside/obj_parent_inside.yy",},"order":0,},
     {"id":{"name":"scr_refreshobj","path":"scripts/scr_refreshobj/scr_refreshobj.yy",},"order":0,},
     {"id":{"name":"spr_gameover","path":"sprites/spr_gameover/spr_gameover.yy",},"order":0,},

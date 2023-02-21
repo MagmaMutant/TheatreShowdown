@@ -34,6 +34,8 @@
     {"name":"spr_p1AttackA","order":3,"path":"sprites/spr_p1AttackA/spr_p1AttackA.yy",},
     {"name":"rm_gameover","order":4,"path":"rooms/rm_gameover/rm_gameover.yy",},
     {"name":"scr_afacingb","order":1,"path":"scripts/scr_afacingb/scr_afacingb.yy",},
+    {"name":"fnt_menu","order":1,"path":"fonts/fnt_menu/fnt_menu.yy",},
+    {"name":"obj_button_quit","order":9,"path":"objects/obj_button_quit/obj_button_quit.yy",},
     {"name":"obj_parent_inside","order":3,"path":"objects/obj_parent_inside/obj_parent_inside.yy",},
     {"name":"scr_refreshobj","order":2,"path":"scripts/scr_refreshobj/scr_refreshobj.yy",},
     {"name":"spr_gameover","order":5,"path":"sprites/spr_gameover/spr_gameover.yy",},
