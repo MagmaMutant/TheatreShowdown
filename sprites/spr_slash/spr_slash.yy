@@ -30,8 +30,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Battle in the Opera House",
-    "path": "Battle in the Opera House.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

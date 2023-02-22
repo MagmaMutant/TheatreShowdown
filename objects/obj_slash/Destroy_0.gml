@@ -1,9 +1,9 @@
-if obj_dummy.hp <=0 
+if target.hp <=0 
 {
-	instance_destroy(obj_dummy);
+	instance_destroy(target);
 }
 else
 {
-obj_dummy.hit = false;
+target.hit = false;
 }
-obj_p1.attacking = false;
+caster.attacking = false;

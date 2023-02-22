@@ -1,3 +1,5 @@
 image_xscale = Def
-sy = y
+//sy = y
 kbpower = 5;
+caster = undefined
+target = undefined

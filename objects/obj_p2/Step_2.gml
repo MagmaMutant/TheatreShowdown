@@ -2,7 +2,7 @@ if global.game == true{
 	if not attacking //and not attacking //and (sprite_index ==spr_p1A or sprite_index ==spr_p1B or sprite_index ==spr_shielded )
 	{
 	
-			if (x < obj_p2.x)
+			if (x < obj_p1.x)
 			{
 				//sprite_index= spr_p1A;
 				image_xscale = 1;

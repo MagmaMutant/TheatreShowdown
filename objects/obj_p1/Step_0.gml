@@ -1,6 +1,5 @@
 
 gamepad_id = -1;
-show_debug_message(gamepad_id)
 for (var i = 0; i < 12; i += 1;)
 {
     if gamepad_is_connected(i)
@@ -12,10 +11,12 @@ for (var i = 0; i < 12; i += 1;)
     }
 }
 
-if gamepad_id > -1
+//show_debug_message(gamepad_id)
+gamepad_id = 0
+if gamepad_id = 0 //> -1
 {
 	//establish controls
-    var _h = gamepad_axis_value(gamepad_id, gp_axislh);
+    var _h = gamepad_axis_value(0, gp_axislh);
 	var _v = gamepad_axis_value(gamepad_id, gp_axislv); // vertical stick
 	var _x = gamepad_button_check_pressed(gamepad_id, gp_face3); //jump
 	//var _select = gamepad_button_check_pressed(gamepad_id,gp_select); // select
