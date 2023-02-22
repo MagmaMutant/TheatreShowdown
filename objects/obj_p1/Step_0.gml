@@ -29,7 +29,7 @@ if gamepad_id = 0 //> -1
 	
 	// cant do while blocking
 	
-	if not blocking and not attacking and not dodging and not freefall
+	if not blocking and not attacking and not dodging and not freefall and not kb
 	{
 		// walking
 		if (_h != 0)
@@ -80,7 +80,7 @@ if gamepad_id = 0 //> -1
 	
 	
 	//block
-	if (_y) && canjump 
+	if (_y) && canjump and not kb
 	{
 		prevsprite = sprite_index
 		sprite_index  = spr_shielded
@@ -95,7 +95,7 @@ if gamepad_id = 0 //> -1
 	}
 	
 	// airdodge
-	if not canjump and not attacking and not dodging and not freefall{
+	if not canjump and not attacking and not dodging and not freefall and not kb{
 		if _y and abs(_h) > .3{
 			dodging = true;
 			freefall = true
@@ -118,7 +118,7 @@ if gamepad_id = 0 //> -1
 		}
 	}
 
-	if dodging == true{
+	if dodging == true and not kb{
 		x += lengthdir_x(15,point_direction(x,y,obj_p1.x,obj_p1.y)) * dodgedirection // change first num for power
 	}
 	//resize	

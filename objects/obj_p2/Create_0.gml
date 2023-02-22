@@ -1,5 +1,6 @@
 hp = 100;
 hpmax = 100;
+hit = false
 prevsprite = sprite_index
 canjump = false;
 gravity = 0.3;

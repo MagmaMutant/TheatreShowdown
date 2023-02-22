@@ -43,6 +43,7 @@
     {"name":"spr_menu","order":8,"path":"sprites/spr_menu/spr_menu.yy",},
     {"name":"rm_selection","order":9,"path":"rooms/rm_selection/rm_selection.yy",},
     {"name":"rm_theatre","order":3,"path":"rooms/rm_theatre/rm_theatre.yy",},
+    {"name":"obj_slash2","order":11,"path":"objects/obj_slash2/obj_slash2.yy",},
     {"name":"spr_p1fall","order":5,"path":"sprites/spr_p1fall/spr_p1fall.yy",},
   ],
 }

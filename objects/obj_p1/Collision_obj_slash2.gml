@@ -1,10 +1,10 @@
 if not hit
 {
-	kbpower = obj_slash.kbpower
+	kbpower = obj_slash2.kbpower
 	hit = true
 	kb= true
 	hp -=20
-	alarm[0] =  room_speed * .3;
+	alarm[3] =  room_speed * .2;
 
 	//if afacingb(obj_p1,obj_dummy)
 	//{

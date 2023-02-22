@@ -17,6 +17,21 @@ gamepad_id = 1
 gamepad_set_axis_deadzone(gamepad_id, 0.5);
 if gamepad_id = 1 //> -1
 {
+	if (kb == true){
+	gravity = .5;
+	//vspeed = -3
+	//y+= lengthdir_y(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	if afacingb(obj_p2,obj_p1){
+		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+		//y+= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	}
+	else{
+		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+		//y-= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	}
+}
+else{
+	//gravity = 0.0; redundant
 	//establish controls
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
 	var _v = gamepad_axis_value(gamepad_id, gp_axislv); // vertical stick
@@ -31,7 +46,7 @@ if gamepad_id = 1 //> -1
 	
 	// cant do while blocking
 	
-	if not blocking and not attacking and not dodging and not freefall
+	if not blocking and not attacking and not dodging and not freefall and not kb
 	{
 		// walking
 		if (_h != 0)
@@ -51,23 +66,23 @@ if gamepad_id = 1 //> -1
 		}
 		
 		//jumping
-		if ((canjump) && (_x)) 
+		if ((canjump) && (_x)) and not kb
 		{
+			gravity = 0.3;
 			vspeed = -9;
-			gravity = .3;
 			canjump = false;
 	
 		}
-		if (_b) //and canjump
+		if (_b) and not kb //and canjump
 		{
 			attacking = true;
 			if image_xscale == 1
 			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : 1})
+				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : 1})
 			}
 			else
 			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash,{ Def : -1})
+				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : -1})
 			}
 		}
 		else
@@ -82,7 +97,7 @@ if gamepad_id = 1 //> -1
 	
 	
 	//block
-	if (_y) && canjump 
+	if (_y) && canjump and not kb
 	{
 		prevsprite = sprite_index
 		sprite_index  = spr_shielded
@@ -97,7 +112,7 @@ if gamepad_id = 1 //> -1
 	}
 	
 	// airdodge
-	if not canjump and not attacking and not dodging and not freefall{
+	if not canjump and not attacking and not dodging and not freefall and not kb{
 		if _y and abs(_h) > .3{
 			dodging = true;
 			freefall = true
@@ -120,7 +135,7 @@ if gamepad_id = 1 //> -1
 		}
 	}
 
-	if dodging == true{
+	if dodging == true and not kb{
 		x -= lengthdir_x(15,point_direction(x,y,obj_p2.x,obj_p2.y)) * dodgedirection // change first num for power
 	}
 	//resize	
@@ -143,3 +158,4 @@ if gamepad_id = 1 //> -1
 //}
 
 
+}

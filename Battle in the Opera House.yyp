@@ -64,6 +64,7 @@
     {"id":{"name":"rm_selection","path":"rooms/rm_selection/rm_selection.yy",},"order":9,},
     {"id":{"name":"rm_theatre","path":"rooms/rm_theatre/rm_theatre.yy",},"order":3,},
     {"id":{"name":"spr_p1Idle","path":"sprites/spr_p1Idle/spr_p1Idle.yy",},"order":0,},
+    {"id":{"name":"obj_slash2","path":"objects/obj_slash2/obj_slash2.yy",},"order":11,},
     {"id":{"name":"spr_p1fall","path":"sprites/spr_p1fall/spr_p1fall.yy",},"order":5,},
   ],
   "RoomOrderNodes": [
