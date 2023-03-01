@@ -34,6 +34,7 @@
   },
   "resources": [
     {"id":{"name":"obj_end","path":"objects/obj_end/obj_end.yy",},"order":5,},
+    {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"order":12,},
     {"id":{"name":"obj_buttonparent","path":"objects/obj_buttonparent/obj_buttonparent.yy",},"order":7,},
     {"id":{"name":"obj_slash","path":"objects/obj_slash/obj_slash.yy",},"order":4,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":1,},
@@ -55,6 +56,7 @@
     {"id":{"name":"fnt_counter","path":"fonts/fnt_counter/fnt_counter.yy",},"order":0,},
     {"id":{"name":"scr_afacingb","path":"scripts/scr_afacingb/scr_afacingb.yy",},"order":1,},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},"order":1,},
+    {"id":{"name":"scr_bothpress","path":"scripts/scr_bothpress/scr_bothpress.yy",},"order":3,},
     {"id":{"name":"obj_button_quit","path":"objects/obj_button_quit/obj_button_quit.yy",},"order":9,},
     {"id":{"name":"obj_parent_inside","path":"objects/obj_parent_inside/obj_parent_inside.yy",},"order":3,},
     {"id":{"name":"scr_refreshobj","path":"scripts/scr_refreshobj/scr_refreshobj.yy",},"order":2,},

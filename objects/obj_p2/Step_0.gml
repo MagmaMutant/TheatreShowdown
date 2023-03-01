@@ -12,7 +12,7 @@ for (var i = 0; i < 12; i += 1;)
 }
 
 //show_debug_message(gamepad_id)
-
+if global.game{
 gamepad_id = 1
 gamepad_set_axis_deadzone(gamepad_id, 0.5);
 if gamepad_id = 1 //> -1
@@ -157,5 +157,7 @@ else{
 }
 //}
 
+
+}
 
 }

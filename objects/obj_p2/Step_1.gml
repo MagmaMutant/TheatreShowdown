@@ -5,7 +5,7 @@
 		vspeed = 0
 		canjump =true
 		freefall = false
-		
+		y=456;
 	}
 	
 if freefall{

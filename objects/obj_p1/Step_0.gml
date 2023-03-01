@@ -28,7 +28,21 @@ if gamepad_id = 0 //> -1
 	//
 	
 	// cant do while blocking
-	
+	if global.game{
+		if (kb == true){
+	gravity = .5;
+	//vspeed = -3
+	//y+= lengthdir_y(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	if afacingb(obj_p2,obj_p1){
+		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+		//y+= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	}
+	else{
+		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+		//y-= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+	}
+}
+else{
 	if not blocking and not attacking and not dodging and not freefall and not kb
 	{
 		// walking
@@ -136,8 +150,8 @@ if gamepad_id = 0 //> -1
 	//}
 	
 	
-
+}
 }
 //}
 
-
+}

@@ -14,3 +14,5 @@ global.game = true
 full = false;
 dodging = false
 freefall = false
+
+
