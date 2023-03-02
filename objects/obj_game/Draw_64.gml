@@ -13,6 +13,9 @@ if countdown> 0{
 	}
 }
 else{
+	show_debug_message("1")
 	global.game = false
+	show_debug_message("2")
 	room_goto(rm_gameover)
+	show_debug_message("3")
 }
