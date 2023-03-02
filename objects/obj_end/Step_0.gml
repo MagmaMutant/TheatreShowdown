@@ -12,5 +12,5 @@ for (var i = 0; i < 12; i += 1;)
 if eitherpress(gp_start){//gamepad_button_check_pressed(0,gp_start) or gamepad_button_check_pressed(1,gp_start)  {
 		//show_debug_message("2")
 		global.game = true;
-		room = rm_theatre;
+		room_goto(rm_theatre)
 }
