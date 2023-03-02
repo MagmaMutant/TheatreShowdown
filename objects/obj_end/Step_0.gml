@@ -14,3 +14,27 @@ if eitherpress(gp_start){//gamepad_button_check_pressed(0,gp_start) or gamepad_b
 		global.game = true;
 		room_goto(rm_theatre)
 }
+if global.winner = 1
+{
+	instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "Player 1 Wins!"});
+	
+}
+if global.winner = 2
+{
+	instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "Player 2 Wins!"});
+}
+if global.winner  =0
+{
+	if obj_p1.hp == obj_p2.hp
+	{
+		instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "It's a TIE"});
+	}
+	if obj_p1.hp > obj_p2.hp
+	{
+		instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "Player 1 Wins!"});
+	}
+	if obj_p1.hp < obj_p2.hp 
+	{
+		instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "Player 2 Wins!"});
+	}
+}

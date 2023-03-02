@@ -73,9 +73,11 @@ else{
 			canjump = false;
 	
 		}
-		if (_b) and not kb //and canjump
+		if (_b) and not kb and not attkcooldown //and canjump
 		{
 			attacking = true;
+			obj_p2.attkcooldown = true;
+			alarm[2] = room_speed * .5;
 			if image_xscale == 1
 			{
 				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : 1})

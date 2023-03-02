@@ -1,0 +1,1 @@
+attkcooldown = false;
