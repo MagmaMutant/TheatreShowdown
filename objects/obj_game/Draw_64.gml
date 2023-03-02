@@ -9,6 +9,7 @@ if countdown> 0{
 }
 else{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	//show_debug_message("1")
 	global.game = false
 	//show_debug_message("2")
@@ -17,6 +18,14 @@ else{
 }
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+=======
+	show_debug_message("1")
+	global.game = false
+	show_debug_message("2")
+	room_goto(rm_gameover)
+	show_debug_message("3")
+}
+>>>>>>> b6c06604e581786ce1558fbf4ac751a3826155bf
 =======
 	show_debug_message("1")
 	global.game = false
