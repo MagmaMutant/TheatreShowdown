@@ -1,4 +1,4 @@
-if not hit
+if not hit 
 {
 	if not blocking 
 	{

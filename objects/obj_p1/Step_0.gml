@@ -34,7 +34,7 @@ if gamepad_id = 0 //> -1
 	//vspeed = -3
 	//y+= lengthdir_y(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
 	if afacingb(obj_p2,obj_p1){
-		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
+		x += lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
 		//y+= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
 	}
 	else{

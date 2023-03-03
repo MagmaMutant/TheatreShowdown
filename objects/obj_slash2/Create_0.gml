@@ -3,3 +3,4 @@ image_xscale = Def
 kbpower = 8;
 caster = obj_p2
 target = obj_p1
+action = true
