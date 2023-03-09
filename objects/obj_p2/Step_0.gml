@@ -140,6 +140,7 @@ else{
 	if dodging == true and not kb{
 		x -= lengthdir_x(15,point_direction(x,y,obj_p2.x,obj_p2.y)) * dodgedirection // change first num for power
 	}
+	
 	//resize	
 	// need if stattement
 	//{

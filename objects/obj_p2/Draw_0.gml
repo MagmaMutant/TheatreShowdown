@@ -1,11 +1,13 @@
 draw_self();
 var hppc = (hp/hpmax)*100
 
+draw_sprite(spr_healthbaroutline162,1, 700,24)//reverse
+
 draw_healthbar(700, 24,1000 , 50, hppc, c_black , c_red, c_green, 1, true, true);
 draw_set_font(fnt_menu)
 draw_set_halign(fa_right);
 draw_set_color(c_red)
-draw_text(1000,50,"Player 2")
+draw_text(1000,50+5,"Player 2")
 
 
 
