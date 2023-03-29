@@ -7,7 +7,7 @@
   ],
   "managed": true,
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_buttonparent","path":"objects/obj_buttonparent/obj_buttonparent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_buttonparent/obj_buttonparent.yy",},"value":"Start (UP)",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_buttonparent","path":"objects/obj_buttonparent/obj_buttonparent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_buttonparent/obj_buttonparent.yy",},"value":"Start",},
   ],
   "parent": {
     "name": "Objects",

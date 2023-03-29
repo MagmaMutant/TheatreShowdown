@@ -8,7 +8,7 @@ if playingC == false and playingOOC == false{
 		audio_play_sound(theatrefight,1000,true)
 	}
 }
-if eitherpress(gp_select){	
+if eitherpress(gp_padl){	
 	if playing{
 		if room == rm_theatre{
 			audio_pause_sound(theatrefight)

@@ -23,7 +23,7 @@ if not hit and not dodging
 		kbpower = obj_slash2.kbpower / 2
 		hit = true
 		kb= true
-		hp -=10
+		hp -=5
 		alarm[3] =  room_speed * .1;
 	}
 	

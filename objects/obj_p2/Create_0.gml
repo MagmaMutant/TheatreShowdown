@@ -15,4 +15,3 @@ full = false;
 dodging = false
 freefall = false
 attkcooldown = false;
-
