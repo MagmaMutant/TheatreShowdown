@@ -15,4 +15,5 @@ full = false;
 dodging = false
 freefall = false
 attkcooldown = false;
+wallc = false;
 //image_blend = make_color_hsv(255,255,c_green)

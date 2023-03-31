@@ -76,6 +76,7 @@ else{
 		if (_b) and not kb and not attkcooldown //and canjump
 		{
 			attacking = true;
+			audio_play_sound(attacksound,1001,false)
 			obj_p2.attkcooldown = true;
 			alarm[2] = room_speed * .5;
 			if image_xscale == 1
@@ -125,7 +126,8 @@ else{
 				dodgedirection =1
 			}
 			image_alpha = .5
-			
+			gravp = gravity
+			gravity = .8
 			alarm[1] = room_speed * .1;  //duration
 			//if _h >0{//going right
 			

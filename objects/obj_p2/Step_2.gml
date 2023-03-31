@@ -16,4 +16,10 @@ if global.game == true{
 			}
 	
 	}
+	var _h = gamepad_axis_value(gamepad_id, gp_axislh);
+	if freefall and not wallc{
+		x += _h * 1.5;
+		image_speed = abs(_h)
+	
+	}
 }
