@@ -20,12 +20,12 @@ if not hit and not dodging
 		////}
 	}
 	if blocking{
-		kbpower = obj_slash2.kbpower / 1.5
+		kbpower = obj_pierce2.kbpower / 1.5
 		hit = true
 		kb= true
-		hp -=20
+		hp -=10
 		alarm[3] =  room_speed * .1;
-		audio_play_sound(shieldhit,1000,false)
+		audio_play_sound(spearhitsshield,1000,false)
 	}
 	
 }
