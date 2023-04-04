@@ -7,4 +7,12 @@
 //		audio_play_sound(endmusic,1000,true)
 	
 	
-//}
+//
+if playing{
+	if room == rm_mm or room == rm_gameover{
+		audio_resume_sound(endmusic)
+	}
+	if room == rm_theatre{
+		audio_resume_sound(theatrefight)
+	}
+}

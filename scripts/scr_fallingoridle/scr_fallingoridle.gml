@@ -3,6 +3,7 @@
 function fallingoridle(){
 			if not canjump
 			{
+				image_speed = abs(vspeed)/5 +1
 				sprite_index = spr_p1fall;
 			}
 			else

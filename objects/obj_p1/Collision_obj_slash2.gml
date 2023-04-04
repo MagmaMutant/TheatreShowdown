@@ -7,7 +7,7 @@ if not hit and not dodging
 		kb= true
 		hp -=20
 		alarm[3] =  room_speed * .2;
-
+		audio_play_sound(suchit,1000,false)
 		//if afacingb(obj_p1,obj_dummy)
 		//{
 		//	//x += 4
@@ -25,6 +25,7 @@ if not hit and not dodging
 		kb= true
 		hp -=5
 		alarm[3] =  room_speed * .1;
+		audio_play_sound(shieldhit,1000,false)
 	}
 	
 }
