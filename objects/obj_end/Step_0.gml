@@ -13,7 +13,11 @@ if eitherpress(gp_start){//gamepad_button_check_pressed(0,gp_start) or gamepad_b
 		//show_debug_message("2")
 		global.game = true;
 		room_goto(rm_mm)
+
 }
+
+// 1= player 2 wins
+// 2 = player 1 wins
 if global.winner == 2
 {
 	instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc : "Player 1 Wins!"});
@@ -25,6 +29,7 @@ if global.winner == 1
 }
 if global.winner != 1 and global.winner != 2
 {
+	
 	instance_create_layer(511,255,"BattleFloor",obj_anc,{ anc :"It's a TIE"});
 	
 }

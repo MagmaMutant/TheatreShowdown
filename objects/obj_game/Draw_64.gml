@@ -8,11 +8,17 @@ if countdown> 0{
 	draw_text(x,y,countdown)
 }
 else{
-	show_debug_message("1")
 	global.game = false
-	show_debug_message("2")
+	if obj_p1.hp > obj_p2.hp{
+		global.winner = 2
+	}
+	if obj_p1.hp < obj_p2.hp{
+		global.winner = 1
+	}
+	else{
+		global.winner = 0
+	}
 	room_goto(rm_gameover)
-	show_debug_message("3")
 }
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

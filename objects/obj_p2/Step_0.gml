@@ -88,6 +88,21 @@ else{
 				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : -1})
 			}
 		}
+		if (_a) and not attkcooldown and not kb//and canjump
+		{
+			attacking = true;
+			audio_play_sound(attacksound,1001,false)
+			attkcooldown = true;
+			alarm[2] = room_speed * 1.5;
+			if image_xscale == 1
+			{
+				instance_create_layer(x,y,"BattleFloor",obj_pierce2,{ Def : 1})
+			}
+			else
+			{
+				instance_create_layer(x,y,"BattleFloor",obj_pierce2,{ Def : -1})
+			}
+		}
 		else
 		{
 			//attacking = false;
