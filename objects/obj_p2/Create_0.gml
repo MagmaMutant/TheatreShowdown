@@ -1,5 +1,6 @@
 hp = 100;
 hpmax = 100;
+rolling =false;
 hit = false
 prevsprite = sprite_index
 canjump = false;
@@ -12,6 +13,7 @@ kb = false
 // hspeed = 0; not used
 global.game = true
 full = false;
+canroll = true
 dodging = false
 freefall = false
 attkcooldown = false;

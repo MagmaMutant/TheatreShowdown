@@ -1,5 +1,9 @@
 hp = 100;
+class = "KNIGHT"
 hpmax = 100;
+rolling =false;
+dodgedirection = 1;
+canroll = true
 hit = false
 prevsprite = sprite_index
 canjump = false;

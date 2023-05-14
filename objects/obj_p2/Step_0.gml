@@ -20,6 +20,7 @@ if gamepad_id = 1 //> -1
 	if (kb == true){
 	gravity = .5;
 	//vspeed = -3
+	//y-= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
 	//y+= lengthdir_y(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
 	if afacingb(obj_p2,obj_p1){
 		x -= lengthdir_x(kbpower,point_direction(x,y,obj_p1.x,obj_p1.y))
@@ -34,6 +35,8 @@ else{
 	//gravity = 0.0; redundant
 	//establish controls
     var _h = gamepad_axis_value(gamepad_id, gp_axislh);
+	var _rb = gamepad_button_check_pressed(gamepad_id, gp_shoulderr); // dodge stick
+	var _lb = gamepad_button_check_pressed(gamepad_id, gp_shoulderl); //dodge
 	var _v = gamepad_axis_value(gamepad_id, gp_axislv); // vertical stick
 	var _x = gamepad_button_check_pressed(gamepad_id, gp_face3); //jump
 	//var _select = gamepad_button_check_pressed(gamepad_id,gp_select); // select
@@ -75,33 +78,12 @@ else{
 		}
 		if (_b) and not kb and not attkcooldown //and canjump
 		{
-			attacking = true;
-			audio_play_sound(attacksound,1001,false)
-			obj_p2.attkcooldown = true;
-			alarm[2] = room_speed * .5;
-			if image_xscale == 1
-			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : 1})
-			}
-			else
-			{
-				instance_create_layer(x,y,"BattleFloor",obj_slash2,{ Def : -1})
-			}
+			scr_classAttackB(obj_p2,"KNIGHT");
 		}
-		if (_a) and canjump and not attkcooldown and not kb//and canjump
+		if (_a) and canjump and not attkcooldown and not kb and not rolling//and canjump
 		{
-			attacking = true;
-			audio_play_sound(spearsound,1001,false)
-			attkcooldown = true;
-			alarm[2] = room_speed * 1.5;
-			if image_xscale == 1
-			{
-				instance_create_layer(x,y,"BattleFloor",obj_pierce2,{ Def : 1})
-			}
-			else
-			{
-				instance_create_layer(x,y,"BattleFloor",obj_pierce2,{ Def : -1})
-			}
+			scr_classAttackA(obj_p2,"RANGER");
+			
 		}
 		else
 		{
@@ -128,7 +110,33 @@ else{
 			fallingoridle();
 		}
 	}
+	if canroll and not rolling and canjump and not kb and not blocking and (_rb or _lb)
+	{
+		show_debug_message("trigger")
+		if _rb{
+			
+			dodgedirection = 1
+			
+		}
 	
+		if _lb{
+			
+			
+			dodgedirection = -1
+		}
+		if x<obj_p1.x{
+			dodgedirection*=-1;
+		}
+		rolling = true
+		canroll = false
+		image_alpha = .5
+		alarm[1] = room_speed * .2;
+		alarm[5] = room_speed * 3;
+	}
+	if rolling = true and not kb{
+		x -= lengthdir_x(15,point_direction(x,y,obj_p1.x,obj_p1.y)) * dodgedirection
+		//rotate
+	}
 	// airdodge
 	if not canjump and not attacking and not dodging and not freefall and not kb{
 		if _y and abs(_h) > .3{
@@ -158,22 +166,7 @@ else{
 		x -= lengthdir_x(15,point_direction(x,y,obj_p2.x,obj_p2.y)) * dodgedirection // change first num for power
 	}
 	
-	//resize	
-	// need if stattement
-	//{
-	//	show_debug_message("1")
-	//	if window_get_fullscreen()
-	//	{
-	//		window_set_fullscreen(false);
-	//	}
-	//	else
-	//	{
-	//		window_set_fullscreen(true);
-	//	}
-	//}
 	
-	
-
 }
 //}
 
