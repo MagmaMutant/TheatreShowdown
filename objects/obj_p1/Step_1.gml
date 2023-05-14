@@ -4,6 +4,7 @@
 		gravity = 0
 		vspeed = 0
 		canjump =true
+		canjump2 = true
 		freefall = false;
 		//y=456;
 		

@@ -9,7 +9,7 @@
 	
 //
 if playing{
-	if room == rm_mm or room == rm_gameover{
+	if room == rm_mm or room == rm_gameover or room == rm_selection{
 		audio_resume_sound(endmusic)
 	}
 	if room == rm_theatre{

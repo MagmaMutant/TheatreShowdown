@@ -1,0 +1,9 @@
+image_xscale = Def
+//sy = y
+dmg = 20
+kbpower = 6;
+asx = x
+caster = obj_p2
+target = obj_p1
+//action = true
+csx = caster.x

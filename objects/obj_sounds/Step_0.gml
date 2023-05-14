@@ -13,7 +13,7 @@ if eitherpress(gp_padl){
 		if room == rm_theatre{
 			audio_pause_sound(theatrefight)
 		}
-		if room == rm_mm or room = rm_gameover{
+		if room == rm_mm or room = rm_gameover  or room == rm_selection{
 			audio_pause_sound(endmusic)
 		}
 		
@@ -24,7 +24,7 @@ if eitherpress(gp_padl){
 		if room == rm_theatre{
 			audio_resume_sound(theatrefight)
 		}
-		if room == rm_mm or room = rm_gameover{
+		if room == rm_mm or room = rm_gameover or room == rm_selection{
 			audio_resume_sound(endmusic)
 		}
 		

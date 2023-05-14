@@ -55,8 +55,8 @@ else{
 		if (_h != 0)
 		{
 			walking = true;
-			x += _h * 4;
-			image_speed = abs(_h) //add animation speed acording to |_h|
+			x += _h * 4 * speedmod;
+			image_speed = abs(_h)*speedmod //add animation speed acording to |_h|
 			sprite_index = spr_p1walk;
 			
 			
@@ -76,13 +76,14 @@ else{
 			canjump = false;
 	
 		}
+		
 		if (_b) and not kb and not attkcooldown //and canjump
 		{
-			scr_classAttackB(obj_p2,"KNIGHT");
+			scr_classAttackB(obj_p2,class);
 		}
 		if (_a) and canjump and not attkcooldown and not kb and not rolling//and canjump
 		{
-			scr_classAttackA(obj_p2,"RANGER");
+			scr_classAttackA(obj_p2,class);
 			
 		}
 		else
@@ -95,21 +96,21 @@ else{
 	
 	
 	
-	
-	//block
-	if (_y) && canjump and not kb
-	{
-		prevsprite = sprite_index
-		sprite_index  = spr_shielded
-		blocking = true;
+	//sPEcial
+	if (_y){
+		scr_classSpecY(class)
+		
 	}
-	else
+	if not _y and class == "KNIGHT"
 	{
-		blocking = false;
-		if not walking{
-			fallingoridle();
+		
+			blocking = false;
+			if not walking{
+				fallingoridle();
+			
 		}
 	}
+	
 	if canroll and not rolling and canjump and not kb and not blocking and (_rb or _lb)
 	{
 		show_debug_message("trigger")
@@ -163,7 +164,7 @@ else{
 	}
 
 	if dodging == true and not kb{
-		x -= lengthdir_x(15,point_direction(x,y,obj_p2.x,obj_p2.y)) * dodgedirection // change first num for power
+		x -= lengthdir_x(15,point_direction(x,y,obj_p2.x,obj_p2.y)) * dodgedirection  // change first num for power
 	}
 	
 	

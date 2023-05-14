@@ -1,2 +1,2 @@
 
-room_goto(rm_theatre);
+room_goto(rm_selection);

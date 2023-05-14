@@ -1,2 +1,2 @@
 caster.attacking = false;
-instance_destroy()
+instance_destroy();

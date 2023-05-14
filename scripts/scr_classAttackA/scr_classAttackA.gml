@@ -30,8 +30,9 @@ function scr_classAttackA(player,char){
 		}
 	}
 	if char == "RANGER"{
+		
 		player.attacking = true;
-		//audio_play_sound(,1001,false)
+		audio_play_sound(shootarrow,1001,false)
 		player.attkcooldown = true;
 		alarm[2] = room_speed * 2;
 		if player == obj_p1{

@@ -7,7 +7,7 @@ if not hit and not dodging
 		kb= true
 		hp -=obj_bow2.dmg
 		alarm[3] =  room_speed * .2;
-		audio_play_sound(suchit,1000,false)
+		audio_play_sound(arrowhit,1000,false)
 		//if afacingb(obj_p1,obj_dummy)
 		//{
 		//	//x += 4
@@ -23,9 +23,13 @@ if not hit and not dodging
 		kbpower = obj_bow2.kbpower / 2
 		hit = true
 		kb= true
-		hp -=0
+		hp -=5
 		alarm[3] =  room_speed * .1;
-		//audio_play_sound(shieldhit,1000,false)
+		audio_play_sound(arrowshield,1000,false)
 	}
+
+}
+if hit{
 	
+	instance_destroy(obj_bow2)
 }

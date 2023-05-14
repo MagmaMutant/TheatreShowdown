@@ -1,3 +1,4 @@
+show_debug_message("DESTROYED")
 caster.attacking = false;
 if target.hp <=0 
 {
@@ -11,3 +12,4 @@ else
 {
 target.hit = false;
 }
+caster.attacking = false;
